@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dewecpopaoxe1"]
+
+[ext_resource type="Script" path="res://Scripts/Slime.gd" id="1_1pwt6"]
+[ext_resource type="Texture2D" uid="uid://dkxqh154drj7m" path="res://Assets/Creatures/Slime/Slime.png" id="2_2pcqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1mar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw7tp"]
+size = Vector2(22, 17)
+
+[node name="Enemy" type="Node2D"]
+
+[node name="Enemy" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1pwt6")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="Enemy"]
+scale = Vector2(1.48, 1.12)
+shape = SubResource("RectangleShape2D_r1mar")
+target_position = Vector2(0, 0)
+max_results = 35
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_xw7tp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+texture_filter = 3
+texture_repeat = 1
+position = Vector2(0, -7)
+texture = ExtResource("2_2pcqp")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxtkwrxwl6wgf"]
+
+[ext_resource type="Texture2D" uid="uid://cdkaxejh3tlpo" path="res://Assets/UI/Hearts/Hearts-2.png" id="1_bg8ie"]
+[ext_resource type="Script" path="res://Scripts/Hearts.gd" id="3_capd1"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Hearts" type="TextureRect" parent="."]
+texture_filter = 3
+offset_left = 120.0
+offset_top = 13.0
+offset_right = 279.0
+offset_bottom = 66.0
+texture = ExtResource("1_bg8ie")
+script = ExtResource("3_capd1")

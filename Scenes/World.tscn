@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0pga0xy5n1ca"]
+
+[ext_resource type="Texture2D" uid="uid://cum8qncx1um14" path="res://Assets/Background.png" id="1_woh0n"]
+[ext_resource type="PackedScene" uid="uid://b1gaogpjijwvm" path="res://Scenes/Player.tscn" id="2_fb5hi"]
+[ext_resource type="PackedScene" uid="uid://dewecpopaoxe1" path="res://Scenes/Slime.tscn" id="3_lh20n"]
+[ext_resource type="PackedScene" uid="uid://dxtkwrxwl6wgf" path="res://Scenes/Interface.tscn" id="4_24ikl"]
+
+[node name="World" type="Node2D"]
+texture_filter = 3
+texture_repeat = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+texture_repeat = 2
+offset_left = -4488.0
+offset_top = -3268.0
+offset_right = 7586.0
+offset_bottom = 5111.0
+texture = ExtResource("1_woh0n")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_fb5hi")]
+position = Vector2(-425, 343)
+
+[node name="Enemy" parent="." instance=ExtResource("3_lh20n")]
+position = Vector2(-265, 369)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_lh20n")]
+position = Vector2(-292, 465)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_lh20n")]
+position = Vector2(-322, 203)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_lh20n")]
+position = Vector2(-219, 284)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_24ikl")]
